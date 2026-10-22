@@ -317,6 +317,15 @@ Each skill feeds into the next. `/office-hours` writes a design doc that `/plan-
 | `/make-pdf` | **Publisher** | Markdown in, publication-quality document out. Mermaid and excalidraw fences render as vector diagrams, fully offline. Images scale to the page and never truncate; wide diagrams get their own landscape page. `--to html` emits one self-contained file, `--to docx` a Word doc. |
 | `/diagram` | **Diagram Maker** | English in, editable diagram out. Emits a triplet: mermaid source, `.excalidraw` you can open and edit on excalidraw.com (hand-drawn style), and rendered SVG/PNG. Zero network. Embed the source in markdown and `/make-pdf` renders it. |
 
+### Before/after example
+
+A plain weekly ops page, before and after `/design-html` in freeform mode: Pretext computes the text heights (`prepare()` + `layout()`) so cards and rows reflow on resize, with one lead decision, a filterable urgent table with an empty state, a pending list, and light and dark schemes.
+
+- Before: https://skill-fixture-before.theroost.dev
+- After: https://design-html-after.theroost.dev
+
+_Illustrative, community-contributed example; not an official demo or benchmark._
+
 ### QA without a webpage
 
 Use the same commands for browser and non-browser software. Start in a repository
